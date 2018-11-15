@@ -1,7 +1,7 @@
 {
   "name": "hop2",
   "version": "1.0.0",
-  "description": "v10",
+  "description": "hópverkefni 2",
   "main": "index.js",
   "scripts": {
     "eslint": "eslint ./src/**/*.js",
