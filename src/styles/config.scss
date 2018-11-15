@@ -1,5 +1,6 @@
 $max-width: 1200px;
 $gutter: 20px;
+<<<<<<< HEAD
 
 $black: #000;
 $grey-1: #999;
@@ -36,3 +37,7 @@ $transition: 300ms ease-in-out;
 @mixin offset-left($cols: 0) {
   margin-left: ($cols/12 * 100) * 1%;
 }
+=======
+$font-main: 'Lora', 'Times New Roman', serif;
+$font-headline: 'Roboto Mono', 'Courier New', monospace;
+>>>>>>> 756f2dd10f90a4f8abd40a0a88df0bc392436926
