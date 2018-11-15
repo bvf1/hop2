@@ -13,7 +13,7 @@
     "dev": "npm-run-all --parallel sass sass-watch browser-sync"
   },
   "keywords": [],
-  "author": "",
+  "author": "Arndís Lilja Þórisdóttir, Ásdís Helga Hafdísardóttir og Bára Valgerður Friðriksdóttir",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.3",
