@@ -1,5 +1,14 @@
 $max-width: 1200px;
 $gutter: 20px;
+$font_family_1: 'Lora', 'Times New Roman', serif;
+$font_family_2: 'Roboto Mono', 'Courier New', monospace;
+
+html, body {
+  font-family: $font_family_1;
+}
+h1 {
+  font-family: $font_family_2;
+}
 
 div {
   villa-fjarlægðu-mig;
