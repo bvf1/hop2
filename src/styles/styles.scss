@@ -20,6 +20,10 @@ html { /* stylelint-disable-line */
   font-size: 16px;
 }
 
+p {
+  font-family: $font-headline;
+}
+
 img { /* stylelint-disable-line */
   max-width: 100%;
 }
