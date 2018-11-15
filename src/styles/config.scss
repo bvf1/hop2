@@ -1,4 +1,21 @@
 $max-width: 1200px;
 $gutter: 20px;
+<<<<<<< HEAD
 $font-main: 'Lora', Times New Roman, serif;
 $font-headline: 'Roboto Mono', Courier New, monospace;
+=======
+$font_family_1: 'Lora', 'Times New Roman', serif;
+$font_family_2: 'Roboto Mono', 'Courier New', monospace;
+
+html, body {
+  font-family: $font_family_1;
+}
+h1 {
+  font-family: $font_family_2;
+}
+
+div {
+  villa-fjarlægðu-mig;
+  stylelint-ætti-að-kvarta;
+}
+>>>>>>> 3689bfb16b31824dfb7ccbcda97fbbb148a398da
