@@ -23,8 +23,23 @@ html { /* stylelint-disable-line */
   font-size: 16px;
 }
 .header {
+  margin-bottom: $gutter * 2;
   background-image: url(./img/header.jpg);
-}
+
+  &__title {
+    margin-bottom: $gutter;
+
+    font-family: $font-heading;
+    font-size: 3.75rem;
+    font-weight: 600;
+
+    text-align: center;
+  }
+  &__text {
+    font-family: $font-main;
+    text-align: center;
+  }
+
 
 p {
   font-family: $font-headline;
