@@ -1,17 +1,17 @@
 $max-width: 1200px;
 $gutter: 20px;
-$font_family_1: 'Lora', 'Times New Roman', serif;
-$font_family_2: 'Roboto Mono', 'Courier New', monospace;
+$font-main: 'Lora', 'Times New Roman', serif;
+$font-headline: 'Roboto Mono', 'Courier New', monospace;
 
 html {
-	font-family: $font_family_1;
+	font-family: $font-main;
 }
 body {
-	font-family: $font_family_1;
+	font-family: $font-main;
 }
 h1 {
-	font-family: $font_family_2;
+	font-family: $font-headline;
 }
 h3 {
-  font-family: $font_family_1;
+  font-family: $font-main;
 }
