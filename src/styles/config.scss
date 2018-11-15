@@ -1,21 +1,38 @@
 $max-width: 1200px;
 $gutter: 20px;
-<<<<<<< HEAD
-$font-main: 'Lora', Times New Roman, serif;
-$font-headline: 'Roboto Mono', Courier New, monospace;
-=======
-$font_family_1: 'Lora', 'Times New Roman', serif;
-$font_family_2: 'Roboto Mono', 'Courier New', monospace;
 
-html, body {
-  font-family: $font_family_1;
-}
-h1 {
-  font-family: $font_family_2;
+$black: #000;
+$grey-1: #999;
+$grey-2: #aaa;
+$grey-3: #ccc;
+$color-1: #2d2;
+$color-2: #1a1;
+$color-3: #fcffd2;
+$color-4: #cc9694;
+
+$font_main: "Lora", Times New Roman, serif;
+$font-headline: "Roboto Mono", Courier New, monospace;
+
+// Leturstærðir
+// 16 24 32 48
+
+$transition: 300ms ease-in-out;
+
+@mixin row() {
+  display: flex;
+
+  margin-right: -($gutter / 2);
+  margin-left: -($gutter / 2);
 }
 
-div {
-  villa-fjarlægðu-mig;
-  stylelint-ætti-að-kvarta;
+@mixin columns($col: 1) {
+  // margföldum með "1%" til að breyta gildi í prósentu gildi
+  width: ($col / 12 * 100) * 1%;
+
+  padding-right: $gutter / 2;
+  padding-left: $gutter / 2;
 }
->>>>>>> 3689bfb16b31824dfb7ccbcda97fbbb148a398da
+
+@mixin offset-left($cols: 0) {
+  margin-left: ($cols/12 * 100) * 1%;
+}
