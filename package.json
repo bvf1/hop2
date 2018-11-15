@@ -12,6 +12,10 @@
     "test": "npm-run-all eslint stylelint",
     "dev": "npm-run-all --parallel sass sass-watch browser-sync"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bvf1/hop2.git"
+  },
   "keywords": [],
   "author": "Arndís Lilja Þórisdóttir, Ásdís Helga Hafdísardóttir og Bára Valgerður Friðriksdóttir",
   "license": "ISC",
