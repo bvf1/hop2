@@ -3,9 +3,15 @@ $gutter: 20px;
 $font_family_1: 'Lora', 'Times New Roman', serif;
 $font_family_2: 'Roboto Mono', 'Courier New', monospace;
 
-html, body {
-  font-family: $font_family_1;
+html {
+	font-family: $font_family_1;
+}
+body {
+	font-family: $font_family_1;
 }
 h1 {
-  font-family: $font_family_2;
+	font-family: $font_family_2;
+}
+h3 {
+  font-family: $font_family_1;
 }
