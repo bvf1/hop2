@@ -1,4 +1,43 @@
 $max-width: 1200px;
 $gutter: 20px;
+<<<<<<< HEAD
+
+$black: #000;
+$grey-1: #999;
+$grey-2: #aaa;
+$grey-3: #ccc;
+$color-1: #2d2;
+$color-2: #1a1;
+$color-3: #fcffd2;
+$color-4: #cc9694;
+
+$font_main: "Lora", Times New Roman, serif;
+$font-headline: "Roboto Mono", Courier New, monospace;
+
+// Leturstærðir
+// 16 24 32 48
+
+$transition: 300ms ease-in-out;
+
+@mixin row() {
+  display: flex;
+
+  margin-right: -($gutter / 2);
+  margin-left: -($gutter / 2);
+}
+
+@mixin columns($col: 1) {
+  // margföldum með "1%" til að breyta gildi í prósentu gildi
+  width: ($col / 12 * 100) * 1%;
+
+  padding-right: $gutter / 2;
+  padding-left: $gutter / 2;
+}
+
+@mixin offset-left($cols: 0) {
+  margin-left: ($cols/12 * 100) * 1%;
+}
+=======
 $font-main: 'Lora', 'Times New Roman', serif;
 $font-headline: 'Roboto Mono', 'Courier New', monospace;
+>>>>>>> 756f2dd10f90a4f8abd40a0a88df0bc392436926
