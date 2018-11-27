@@ -1,8 +1,5 @@
 @import "config";
 
-$font-main: 'Lora', 'Times New Roman', serif;
-$font-headline: 'Roboto Mono', 'Courier New', monospace;
-
 * {
   padding: 0;
   margin: 0;
@@ -22,6 +19,7 @@ html { /* stylelint-disable-line */
   font-family: $font-main;
   font-size: 16px;
 }
+<<<<<<< HEAD
 .main-header {
   margin-bottom: $gutter * 2;
   background-color: $background_color_1;
@@ -48,11 +46,30 @@ html { /* stylelint-disable-line */
 
 
 p {
+=======
+
+main { /* stylelint-disable-line */
+
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header { /* stylelint-disable-line */
+  background-image: url("./img/header.jpg");
+}
+
+p { /* stylelint-disable-line */
+>>>>>>> 6e9a7abb55a4108b6fe4d42223eb606c21f00f63
   font-family: $font-headline;
 }
+
+a { /* stylelint-disable-line */
+  text-decoration: none;
+}
+
 
 img { /* stylelint-disable-line */
   max-width: 100%;
 }
 
-// TODO import
+@import "index";

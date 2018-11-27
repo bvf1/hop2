@@ -1,0 +1,34 @@
+// a {
+//   text-decoration: none;
+// }
+
+.container {
+  padding: $gutter;
+}
+
+.lectures {
+  //@include centered;
+  // margin-right: auto;
+  //margin-left: auto;
+  @media (min-width: 599px) {
+    @include row;
+    flex-wrap: wrap;
+  }
+}
+
+.grey {
+  background-color: $grey-3;
+}
+
+.lecture {
+  margin-top: $gutter;
+  margin-bottom: $gutter;
+  color: $black;
+  @include columns(12);
+  @media (min-width: 599px) {
+    @include columns(6);
+  }
+  @media (min-width: 799px) {
+    @include columns(4);
+  }
+}
