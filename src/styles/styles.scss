@@ -22,10 +22,14 @@ html { /* stylelint-disable-line */
   font-family: $font-main;
   font-size: 16px;
 }
-.header {
+.main-header {
   margin-bottom: $gutter * 2;
-  background-image: url(./img/header.jpg);
+  background-color: $background_color_1;
+  width: 100%;
+  background-image: url(https://postimg.cc/pyqvnbvJ); //bjó til link á myndina
+}
 
+.header {
   &__title {
     margin-bottom: $gutter;
 
@@ -39,6 +43,8 @@ html { /* stylelint-disable-line */
     font-family: $font-main;
     text-align: center;
   }
+}
+
 
 
 p {
