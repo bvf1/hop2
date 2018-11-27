@@ -1,5 +1,4 @@
-{
-  "lectures": [
+  [
     {
       "slug": "html-sagan",
       "title": "Sagan",
@@ -549,4 +548,4 @@
       ]
     }
   ]
-}
+

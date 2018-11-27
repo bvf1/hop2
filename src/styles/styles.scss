@@ -1,8 +1,5 @@
 @import "config";
 
-$font-main: 'Lora', 'Times New Roman', serif;
-$font-headline: 'Roboto Mono', 'Courier New', monospace;
-
 * {
   padding: 0;
   margin: 0;
@@ -22,11 +19,19 @@ html { /* stylelint-disable-line */
   font-family: $font-main;
   font-size: 16px;
 }
-.header {
-  background-image: url(./img/header.jpg);
+
+body { /* stylelint-disable-line */
+
+  @include centered;
+  //margin-right: 2px;
+  //margin-left: 3px;
 }
 
-p {
+.header { /* stylelint-disable-line */
+  background-image: url("./img/header.jpg");
+}
+
+p { /* stylelint-disable-line */
   font-family: $font-headline;
 }
 
