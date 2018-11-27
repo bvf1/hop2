@@ -20,11 +20,10 @@ html { /* stylelint-disable-line */
   font-size: 16px;
 }
 
-body { /* stylelint-disable-line */
+main { /* stylelint-disable-line */
 
-  @include centered;
-  //margin-right: 2px;
-  //margin-left: 3px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .header { /* stylelint-disable-line */
@@ -35,8 +34,13 @@ p { /* stylelint-disable-line */
   font-family: $font-headline;
 }
 
+a { /* stylelint-disable-line */
+  text-decoration: none;
+}
+
+
 img { /* stylelint-disable-line */
   max-width: 100%;
 }
 
-// TODO import
+@import "index";

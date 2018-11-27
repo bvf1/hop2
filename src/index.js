@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 */ 
 
+  const URL = 'fyrirlestur.html?slug=';
+
   fetch('../lectures.json')
     .then((result) => {
       if (!result.ok) {
@@ -24,14 +26,20 @@ document.addEventListener('DOMContentLoaded', () => {
       let output = '';
       data.forEach((lecture) => {
         output += `
-        <div class="lecture">
+        <a href="${URL}${lecture.slug}" class="lecture"><div class="grey">
           <p>${lecture.thumbnail}</p>
           <p>${lecture.category}</p>
-          <p>${lecture.title}</p>
-        </div>
+          <h1>${lecture.title}</h1>
+        </div></a>
       `;
       });
-      document.getElementById('lectures').innerHTML = output;
+      document.getElementById('output').innerHTML = output;
     })
     .catch(error => console.error(error));
 });
+
+// const dev = document.querySelector('.lecture');
+// dev.addEventListener('click', () => {
+//   console.log("pushed");
+
+// });
