@@ -36,11 +36,8 @@ $transition: 300ms ease-in-out;
 @mixin offset-left($cols: 0) {
   margin-left: ($cols/12 * 100) * 1%;
 }
-<<<<<<< HEAD
-=======
 
 @mixin centered() {
   margin-right: auto;
   margin-left: auto;
 }
->>>>>>> 6e9a7abb55a4108b6fe4d42223eb606c21f00f63
