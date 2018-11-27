@@ -19,34 +19,25 @@ html { /* stylelint-disable-line */
   font-family: $font-main;
   font-size: 16px;
 }
-<<<<<<< HEAD
-.main-header {
-  margin-bottom: $gutter * 2;
-  background-color: $background_color_1;
-  width: 100%;
-  background-image: url(https://postimg.cc/pyqvnbvJ); //bjó til link á myndina
-}
 
 .header {
-  &__title {
-    margin-bottom: $gutter;
-
-    font-family: $font-heading;
-    font-size: 3.75rem;
-    font-weight: 600;
-
-    text-align: center;
-  }
-  &__text {
-    font-family: $font-main;
-    text-align: center;
-  }
-}
+	overflow: hidden;
+	background-image: url(https://i.postimg.cc/15Z32sY2/header.jpg);
+  //padding: 20px 10px;
+	h1 {
+		font-family: $font_family_1;
+		font-size: 3.75rem;
+		font-weight: 600;
+		text-align: center;
+	}
+	h3 {
+		font-family: $font_family_2;
+		text-align: center;
+	}
 
 
 
 p {
-=======
 
 main { /* stylelint-disable-line */
 
@@ -54,12 +45,12 @@ main { /* stylelint-disable-line */
   margin: 0 auto;
 }
 
-.header { /* stylelint-disable-line */
-  background-image: url("./img/header.jpg");
-}
+/*.header { /* stylelint-disable-line */
+  //background-image: url("./img/header.jpg");
+//}
+
 
 p { /* stylelint-disable-line */
->>>>>>> 6e9a7abb55a4108b6fe4d42223eb606c21f00f63
   font-family: $font-headline;
 }
 
