@@ -1,3 +1,4 @@
+
 // import List from './lib/list';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // console.log(data);
 
     //  const lect = data;
-
+        
       const lecturesData = data.lectures;
 
       let output = '';
@@ -49,7 +50,3 @@ document.addEventListener('DOMContentLoaded', () => {
 //   console.log("pushed");
 
 // });
-
-const lti = document.getElementById('lti');
-console.log(lti);
-

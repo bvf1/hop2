@@ -3,9 +3,9 @@
 //}
 
 .header {
-	//overflow: hidden;
-	background-image: url(https://i.postimg.cc/15Z32sY2/header.jpg);
-  //padding: 20px 10px;
+	background: url(../img/header.jpg) 50% 50%;
+	background-size: cover;
+
 	h1 {
 	//	font-family: $font_family_1;
 		font-size: 3.75rem;

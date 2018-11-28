@@ -66,8 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
       return result.json();
     })
     .then((data) => {
-      
-
       const lecturesData = data.lectures;
       const chosenLecture = lecturesData.find((lecture => lecture.slug === slug));
 
@@ -80,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const contents = chosenLecture.content;
 
-      console.log(contents);
+      // console.log(contents);
 
       let lectureType;
       let lectureData;

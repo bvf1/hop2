@@ -4,16 +4,22 @@
 
 .container {
   padding: $gutter;
+  @media (min-width: 1200px) {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 
 .lectures {
-  //@include centered;
-  // margin-right: auto;
-  //margin-left: auto;
+  @include centered;
+  margin-right: auto;
+  margin-left: auto;
   @media (min-width: 599px) {
     @include row;
     flex-wrap: wrap;
   }
+}
+.image {
 }
 
 .grey {
