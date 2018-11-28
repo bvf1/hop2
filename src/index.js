@@ -29,11 +29,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const lectures = data.lectures;
 
+      
       let output = '';
       lectures.forEach((lecture) => {
+        lecture.thumbnail
+        console.log(lecture.thumbnail);
+        
         output += `
         <a href="${URL}${lecture.slug}" class="lecture"><div class="grey">
-          <p>${lecture.thumbnail}</p>
+          <img class="image" src="${lecture.thumbnail}">
           <p>${lecture.category}</p>
           <h1 class="title">${lecture.title}</h1>
         </div></a>

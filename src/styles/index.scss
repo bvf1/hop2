@@ -4,6 +4,7 @@
 
 .container {
   //padding: $gutter;
+  @media (min-width:)
 }
 
 .lectures {
@@ -14,6 +15,8 @@
     @include row;
     flex-wrap: wrap;
   }
+}
+.image {
 }
 
 .grey {
