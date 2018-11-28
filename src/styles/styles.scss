@@ -1,41 +1,24 @@
 @import "config";
 
-$font_family_1: 'Lora', 'Times New Roman', serif;
-$font_family_2: 'Roboto Mono', 'Courier New', monospace;
-$background_color_1: #999;
-
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: inherit;
-	&::before {
-		box-sizing: inherit;
-	}
-	&::after {
-		box-sizing: inherit;
-	}
-}
-html {
-	box-sizing: border-box;
-	overflow-x: hidden;
-	overflow-y: scroll;
-	font-family: $font_family_1;
-	font-size: 16px;
+  padding: 0;
+  margin: 0;
 }
 
-.protection {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 1;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
-<<<<<<< HEAD
 
+html { /* stylelint-disable-line */
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: scroll; // alltaf hafa y skrollbar
 
-
-
+  font-family: $font-main;
+  font-size: 16px;
+}
 
 p { }
 
@@ -43,46 +26,7 @@ main { /* stylelint-disable-line */
 
   max-width: 1200px;
   margin: 0 auto;
-=======
-.header {
-	background: url(../img/header.jpg) 50% 50%;
-	background-size: cover;
 }
-h1 {
-	font-family: $font_family_1;
-	font-size: 3.75rem;
-	font-weight: 600;
-	text-align: center;
-}
-h3 {
-	font-family: $font_family_2;
-	text-align: center;
-}
-.buttons {
-  display: table;
-  position: absolute;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-button {
-	padding: 20 px;
-	font-size: 16px;
-	font-family: $font_family_2;
-	border: 1.2px solid #999;
-	background-color: $background_color_1;
-	border-radius: 5px;
-	text-align: center;
-}
-main {
-	max-width: 1200px;
-	margin: 0 auto;
->>>>>>> cf77a974d11419fd026d47f37882a5c29a991652
-}
-
-/*.header { /* stylelint-disable-line */
-  //background-image: url("./img/header.jpg");
-//}
-
 
 p { /* stylelint-disable-line */
   font-family: $font-headline;
@@ -92,15 +36,9 @@ a { /* stylelint-disable-line */
   text-decoration: none;
 }
 
-
 img { /* stylelint-disable-line */
   max-width: 100%;
 }
 
 @import "index";
-<<<<<<< HEAD
 @import "header";
-
-=======
-@import "lecture-page";
->>>>>>> cf77a974d11419fd026d47f37882a5c29a991652

@@ -4,22 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const page = document.querySelector('body');
   const isLecturePage = page.classList.contains('lecture-page');
 
-<<<<<<< HEAD
   /* if (isLecturePage) {
-=======
- /*if (isLecturePage) {
->>>>>>> cf77a974d11419fd026d47f37882a5c29a991652
     //
   } else {
     const list = new List();
     list.load();
-<<<<<<< HEAD
   }
 */
-=======
-  }*/
-
->>>>>>> cf77a974d11419fd026d47f37882a5c29a991652
 
   const URL = 'fyrirlestur.html?slug=';
 
@@ -36,13 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //  const lect = data;
 
-      const lectures = data.lectures;
+      const lecturesData = data.lectures;
 
       let output = '';
-      lectures.forEach((lecture) => {
+      lecturesData.forEach((lecture) => {
         output += `
         <a href="${URL}${lecture.slug}" class="lecture"><div class="grey">
-          <p>${lecture.thumbnail}</p>
+          <p class lti>${lecture.thumbnail}</p>
           <p>${lecture.category}</p>
           <h1>${lecture.title}</h1>
         </div></a>
@@ -58,3 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //   console.log("pushed");
 
 // });
+
+const lti = document.getElementById('lti');
+console.log(lti);
+
