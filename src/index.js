@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <a href="${URL}${lecture.slug}" class="lecture"><div class="grey">
           <p>${lecture.thumbnail}</p>
           <p>${lecture.category}</p>
-          <h1>${lecture.title}</h1>
+          <h1 class="title">${lecture.title}</h1>
         </div></a>
       `;
       });

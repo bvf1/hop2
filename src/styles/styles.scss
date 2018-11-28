@@ -48,6 +48,12 @@ button {
 	border-radius: 5px;
 	text-align: center;
 }
+.title {
+	font-family: $font_family_1;
+	text-align: left;
+	font-size: 24px;
+	font-weight: bold;
+}
 main {
 	max-width: 1200px;
 	margin: 0 auto;

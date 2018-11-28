@@ -1,14 +1,15 @@
-
-
-.protection {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 1;
-}
-.lecture__header {
+.header2 {
 	background: url(../img/code.jpg) 50% 50%;
 	background-size: cover;
+
+	h1 {
+		font-family: $font_family_1;
+		font-size: 3.75rem;
+		font-weight: 600;
+		text-align: center;
+	}
+	h3 {
+		font-family: $font_family_2;
+		text-align: center;
+	}
 }
