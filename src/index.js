@@ -28,13 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
     //  const lect = data;
 
       const lectures = data.lectures;
-
       
       let output = '';
       lectures.forEach((lecture) => {
-        lecture.thumbnail
-        console.log(lecture.thumbnail);
-        
         output += `
         <a href="${URL}${lecture.slug}" class="lecture"><div class="grey">
           <img class="image" src="${lecture.thumbnail}">
@@ -53,3 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
 //   console.log("pushed");
 
 // });
+
+const el = document.getElementsByClassName("lecture").src;
+el.parentNode.parentNode.parentNode.removeChild(el.parentNode);
