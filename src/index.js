@@ -4,13 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const page = document.querySelector('body');
   const isLecturePage = page.classList.contains('lecture-page');
 
- /* if (isLecturePage) {
+  /* if (isLecturePage) {
     //
   } else {
     const list = new List();
     list.load();
   }
-*/ 
+*/
 
   const URL = 'fyrirlestur.html?slug=';
 
@@ -19,12 +19,18 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!result.ok) {
         throw new Error('Non 200 status');
       }
+
       return result.json();
     })
     .then((data) => {
       // console.log(data);
+
+    //  const lect = data;
+
+      const lectures = data.lectures;
+
       let output = '';
-      data.forEach((lecture) => {
+      lectures.forEach((lecture) => {
         output += `
         <a href="${URL}${lecture.slug}" class="lecture"><div class="grey">
           <p>${lecture.thumbnail}</p>
