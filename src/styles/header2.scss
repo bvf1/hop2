@@ -1,24 +1,14 @@
 
 
-// .protection {
-// 	position: absolute;
-// 	top: 0;
-// 	right: 0;
-// 	bottom: 0;
-// 	left: 0;
-// 	z-index: 1;
-// }
-// .lecture__header {
-// 	background: url(../img/code.jpg) 50% 50%;
-// 	background-size: cover;
-// }
-// .lecture__h1 {
-// 	font-family: $font_family_1;
-// 	font-size: 3.75rem;
-// 	font-weight: 600;
-// 	text-align: center;
-// }
-// .lecture__h3 {
-// 	font-family: $font_family_2;
-// 	text-align: center;
-// }
+.protection {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+}
+.lecture__header {
+	background: url(../img/code.jpg) 50% 50%;
+	background-size: cover;
+}
