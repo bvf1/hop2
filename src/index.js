@@ -44,11 +44,16 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(error => console.error(error));
 });
 
+$("image").each(function(){
+  if ($(this).attr("src") == "")
+  $(this).hide();
+  else
+  $(this).show();
+})
+
+
 // const dev = document.querySelector('.lecture');
 // dev.addEventListener('click', () => {
 //   console.log("pushed");
 
 // });
-
-const el = document.getElementsByClassName("lecture").src;
-el.parentNode.parentNode.parentNode.removeChild(el.parentNode);

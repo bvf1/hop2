@@ -16,7 +16,11 @@
     flex-wrap: wrap;
   }
 }
+
 .image {
+	img[src=""] {
+		display: hidden;
+	}
 }
 
 .grey {
