@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/named
 import { empty } from './helpers';
 
 export default class List {

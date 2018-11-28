@@ -44,12 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(error => console.error(error));
 });
 
-$("image").each(function(){
-  if ($(this).attr("src") == "")
-  $(this).hide();
-  else
-  $(this).show();
-})
 
 
 // const dev = document.querySelector('.lecture');
