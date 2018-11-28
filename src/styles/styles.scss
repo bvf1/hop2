@@ -23,31 +23,6 @@ html {
 	font-size: 16px;
 }
 
-.protection {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 1;
-}
-<<<<<<< HEAD
-
-
-
-
-
-p { }
-
-main { /* stylelint-disable-line */
-
-  max-width: 1200px;
-  margin: 0 auto;
-=======
-.header {
-	background: url(../img/header.jpg) 50% 50%;
-	background-size: cover;
-}
 h1 {
 	font-family: $font_family_1;
 	font-size: 3.75rem;
@@ -76,7 +51,6 @@ button {
 main {
 	max-width: 1200px;
 	margin: 0 auto;
->>>>>>> cf77a974d11419fd026d47f37882a5c29a991652
 }
 
 p { /* stylelint-disable-line */
@@ -93,9 +67,5 @@ img { /* stylelint-disable-line */
 }
 
 @import "index";
-<<<<<<< HEAD
+@import "header2";
 @import "header";
-
-=======
-@import "lecture-page";
->>>>>>> cf77a974d11419fd026d47f37882a5c29a991652

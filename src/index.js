@@ -4,22 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const page = document.querySelector('body');
   const isLecturePage = page.classList.contains('lecture-page');
 
-<<<<<<< HEAD
   /* if (isLecturePage) {
-=======
- /*if (isLecturePage) {
->>>>>>> cf77a974d11419fd026d47f37882a5c29a991652
     //
   } else {
     const list = new List();
     list.load();
-<<<<<<< HEAD
   }
 */
-=======
-  }*/
-
->>>>>>> cf77a974d11419fd026d47f37882a5c29a991652
 
   const URL = 'fyrirlestur.html?slug=';
 
