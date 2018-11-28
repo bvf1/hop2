@@ -46,8 +46,8 @@ h3 {
 	text-align: center;
 }
 .buttons {
-  display: table;
-  position: absolute;
+  display: flex;
+  justify-content: center;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
@@ -64,11 +64,6 @@ main {
 	max-width: 1200px;
 	margin: 0 auto;
 }
-
-/*.header { /* stylelint-disable-line */
-  //background-image: url("./img/header.jpg");
-//}
-
 
 p { /* stylelint-disable-line */
   font-family: $font-headline;
