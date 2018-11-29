@@ -1,9 +1,9 @@
- .code {
-   display: inherit;
+.code {
+  display: inherit;
+  color:black;
+  }
 
-   color:black;
- }
- .back {
+.back {
    text-align: center;
    font-family: $font_headline;
  }
@@ -13,8 +13,18 @@
     padding-right: 0;
     padding-left: 0;
   }
+<<<<<<< HEAD
  }
 
+.iframe {
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+=======
+}
+>>>>>>> 89f79c0ae099631ce588cb55a49bda8672249e58
   iframe {
     margin: auto;
     margin-top: 1em;
@@ -77,6 +87,24 @@ button {
     background-color: white;
     border: none;
     color: black;
+    padding: 15px 32px;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    margin: auto;
     cursor: pointer;
     font-family: $font_main;
+  }
+
+  .haetta {
+    padding: 15px 32px;
+    position: absolute;
+    margin: auto;
+    left: 15%;
+  }
+  .back {
+    padding: 15px 32px;
+    position: absolute;
+    margin: auto;
+    left: 15%;
   }
