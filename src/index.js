@@ -34,8 +34,9 @@ console.log(isLecturePage);
 
       let output = '';
       let undef = '';
+      //&#10003
+     // &#x2713
 
-      let nr = 1;
       lecturesData.forEach((lecture) => {
         if (lecture.thumbnail === undefined) undef = ` class="${lecture.thumbnail}"`;
         output += 
@@ -44,7 +45,10 @@ console.log(isLecturePage);
           <a href="${URL}${lecture.slug}" class="lecture lecture-page list"><div class="grey">
             <img${undef} src="${lecture.thumbnail}">
             <p>${lecture.category}</p>
-            <h1 class="title">${lecture.title}</h1>
+            <div>
+              <h1 class="title">${lecture.title}</h1>
+              <p class="unchecked">&#10003</p>
+            </div>
           </div></a>
       `;
         undef = '';
