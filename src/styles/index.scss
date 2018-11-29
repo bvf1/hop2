@@ -26,9 +26,9 @@
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
-button {
+.indxbutt {
 	flex-direction: row;
-	padding: 20 px;
+	padding: 20px;
 	font-size: 16px;
 	font-family: $font_headline;
 	border: 1.2px solid #999;
@@ -45,6 +45,10 @@ button {
 
 .grey {
   background-color: $grey-3;
+  display: table;
+  vertical-align: bottom;
+  height: 100%;
+  width: 100%;
 }
 
 .pflokkur {
@@ -62,11 +66,15 @@ button {
   margin-top: $gutter;
   margin-bottom: $gutter;
   color: $black;
+
   @include columns(12);
-  @media (min-width: 599px) {
-    @include columns(6);
+  @media (min-width: 500px) {
+    @include columns(7);
   }
-  @media (min-width: 799px) {
+  @media (min-width: 1200px) {
+    @include columns(5);
+  }
+  @media (min-width: 1500px) {
     @include columns(4);
   }
 }

@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <h3 class="headertext">${category}</h3>
     <h1 class="headertitle">${title}</h1> 
     `;
-    output.innerHTML = text;
+    document.getElementById('header').innerHTML = text;
   }
 
   function element(type, data) {
@@ -43,14 +43,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     switch (type) {
       case 'youtube':
-        text = `
-          <div class="video">
-            <iframe src="${data}" frameborder="0" allowfullscreen="0">
-            <iframe>
-          </div>
-        `;
-        item = document.getElementById('output');
-        item.innerHTML = text;
+        el = document.createElement('iframe');
+        el.setAttribute('src', data)
+        el.setAttribute('src', data);
+        el.setAttribute('frameborder', '0');
+        el.setAttribute('allowfullscreen', '0');
+        output.appendChild(el)
+        output.appendChild(el);
         return;
       case 'text':
         string = data.split('\n');
