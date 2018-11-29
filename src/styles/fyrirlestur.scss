@@ -14,6 +14,12 @@
     padding-left: 0;
   }
  }
+ .haetta {
+   padding: $gutter;
+   @media (min-width: 1200px) {
+     padding-right: 0;
+     padding-left: 0;
+ }
 .iframe {
   margin: auto;
   margin-top: 1em;
@@ -85,5 +91,21 @@ button {
     background-color: white;
     border: none;
     color: black;
+    padding: 15px 32px;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    margin: auto;
     cursor: pointer;
+  }
+
+  .unfinished {
+    position: absolute;
+    left: 15%;
+  }
+  .back {
+    padding: 15px 32px;
+    position: absolute;
+    margin: auto;
+    left: 15%;
   }
