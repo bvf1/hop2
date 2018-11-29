@@ -1,4 +1,5 @@
 //import List from './lib/list';
+//import isChecked from './lib/fyrirlestur';
 
 document.addEventListener('DOMContentLoaded', () => {
   const page = document.querySelector('body');
@@ -34,8 +35,7 @@ console.log(isLecturePage);
 
       let output = '';
       let undef = '';
-      //&#10003
-     // &#x2713
+ 
 
       lecturesData.forEach((lecture) => {
         if (lecture.thumbnail === undefined) undef = ` class="${lecture.thumbnail}"`;
@@ -47,7 +47,7 @@ console.log(isLecturePage);
             <p>${lecture.category}</p>
             <div>
               <h1 class="title">${lecture.title}</h1>
-              <p class="unchecked">&#10003</p>
+              <p class="check check--hidden">&#10003</p>
             </div>
           </div></a>
       `;
@@ -57,6 +57,9 @@ console.log(isLecturePage);
     })
     .catch(error => console.error(error));   
 });
+
+let check = document.getElementsByClassName('check');
+
 
 let button = document.querySelectorAll('button');
 
