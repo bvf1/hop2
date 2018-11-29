@@ -1,5 +1,5 @@
 //import List from './lib/list';
-//import isChecked from './lib/fyrirlestur';
+import finished from './lib/fyrirlestur';
 
 document.addEventListener('DOMContentLoaded', () => {
   const page = document.querySelector('body');
@@ -13,7 +13,6 @@ console.log(isLecturePage);
   }
 */
 
-
   let el = document.body.getElementsByClassName('list');
   let arr = Array.from(el);
 
@@ -22,6 +21,8 @@ console.log(isLecturePage);
   }
 
   const URL = 'fyrirlestur.html?slug=';
+
+  el = document.getElementby
 
   fetch('../lectures.json')
     .then((result) => {
@@ -36,11 +37,13 @@ console.log(isLecturePage);
       let output = '';
       let undef = '';
  
-
       lecturesData.forEach((lecture) => {
+        // if (lecture.slug === finished.slug) {
+        //   el = 
+        // }
+        console.log(lecture.slug);
         if (lecture.thumbnail === undefined) undef = ` class="${lecture.thumbnail}"`;
-        output += 
-        `
+        output += `
         
           <a href="${URL}${lecture.slug}" class="lecture lecture-page list"><div class="grey">
             <img${undef} src="${lecture.thumbnail}">
@@ -58,11 +61,13 @@ console.log(isLecturePage);
     .catch(error => console.error(error));   
 });
 
-let check = document.getElementsByClassName('check');
+
+//if (finished.slug)
+
+//let check = document.getElementsByClassName('check');
 
 
 let button = document.querySelectorAll('button');
-
 button[0].addEventListener('click', () => {
   el = document.getElementById('1');
   if (el.checked) el = true;

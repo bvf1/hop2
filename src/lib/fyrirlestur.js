@@ -1,5 +1,13 @@
+//export const isFinished = {};
+let isFinished;
 const x = window.location.search;
 const slug = x.substring(6);
+const finished = {
+  slug,
+  finished: isFinished,
+};
+export default finished;
+
 
 let lists = -1;
 let quotes = -1;
@@ -127,6 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .then((data) => {
       const lecturesData = data.lectures;
       const chosenLecture = lecturesData.find((lecture => lecture.slug === slug));
+      
 
       const headerImage = chosenLecture.image;
       const headerCategory = chosenLecture.category;
@@ -162,3 +171,26 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(error => console.error(error));
 });
+
+let button = document.querySelector('button');
+let el
+
+button.addEventListener('click', () => {
+  el = document.getElementById('finishButton')
+  text = document.getElementById('finishButton').innerText;
+  document.getElementById('finishButton').innerText = 'Fyrirlestur er kláraður';
+  console.log(el);
+
+
+  if (text === 'Klára fyrirlestur') {
+    //isFinished(true);
+
+    isFinished = false;
+    document.getElementById('finishButton').innerText = 'Fyrirlestur er kláraður';
+  } else {
+    document.getElementById('finishButton').innerText = 'Klára fyrirlestur';
+    //isFinished(false);
+    isFinished = true;
+  }
+});
+
