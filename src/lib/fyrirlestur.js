@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       case 'li':
         li = document.createElement('li');
+        li.setAttribute('class', 'li');
         text = document.createTextNode(data);
         li.appendChild(text);      
 
