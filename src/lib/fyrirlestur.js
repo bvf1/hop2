@@ -43,12 +43,15 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       case 'p':
         el = document.createElement('p');
+        el.setAttribute('class', 'setn');
         break;
       case 'attribute':
         el = document.createElement('attribute');
+        el.setAttribute('class', 'hof');
         break;
       case 'quote':
         el = document.createElement('blockquote');
+        el.setAttribute('class', 'qt');
         break;
       case 'image':
         el = document.createElement('img');

@@ -1,19 +1,35 @@
-// .code {
-//   display: inherit;
+ .code {
+   display: inherit;
 
-//   color:white;
-// }
-// .back {
-//   text-align: center;
-//   font-family: $font_headline;
-// }
-// iframe {
-//   width: 560px;
-//   height: 315ox;
+   color:white;
+ }
+ .back {
+   text-align: center;
+   font-family: $font_headline;
+ }
+ .container {
+  padding: $gutter;
+  @media (min-width: 1200px) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+ }
+iframe {
+  width: 800px;
+  height: 450px;
 
-//   position: absolute;
-//   margin: auto;
-// }
-// .text {
-//   margin-bottom: 1em;
-// }
+  margin: auto;
+  margin-bottom: 2em;
+}
+.setn {
+  margin-bottom: 1em;
+  font-family: $font_main;
+ }
+.qt {
+   margin-top: 1em;
+   margin-bottom: 0.5em;
+ }
+ .hof {
+   margin-top: 0.5em;
+   margin-bottom: 1em;
+ }
