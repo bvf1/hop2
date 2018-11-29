@@ -9,8 +9,6 @@ let lists = -1;
 document.addEventListener('DOMContentLoaded', () => {
   const page = document.querySelector('body');
 
-  
-
   function setHeader(image, category, title) {
     let output = '';
     output += `
@@ -23,12 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function element(type, data) {
     let el;
-    //const output = document.getElementById('output');
     let li;
-    
     let text;
     let item;
-    
 
     switch (type) {
       case 'youtube':

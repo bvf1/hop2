@@ -1,4 +1,3 @@
-
 // import List from './lib/list';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -27,16 +26,16 @@ document.addEventListener('DOMContentLoaded', () => {
       // console.log(data);
 
     //  const lect = data;
-        
-      const lecturesData = data.lectures;
 
+      const lectures = data.lectures;
+      
       let output = '';
-      lecturesData.forEach((lecture) => {
+      lectures.forEach((lecture) => {
         output += `
         <a href="${URL}${lecture.slug}" class="lecture"><div class="grey">
-          <p class lti>${lecture.thumbnail}</p>
+          <img class="image" src="${lecture.thumbnail}">
           <p>${lecture.category}</p>
-          <h1>${lecture.title}</h1>
+          <h1 class="title">${lecture.title}</h1>
         </div></a>
       `;
       });
@@ -44,6 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(error => console.error(error));
 });
+
+
 
 // const dev = document.querySelector('.lecture');
 // dev.addEventListener('click', () => {
