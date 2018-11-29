@@ -14,39 +14,11 @@ console.log(isLecturePage);
 
 
   let el = document.body.getElementsByClassName('list');
-  let lecturePages = Array.from(el);
-  console.log(lecturePages[0]);
-  console.log(lecturePages[0]);
-  
+  let arr = Array.from(el);
 
-  // let lecturePage = []; // [lecturePages.lenght];
-  // for (let i = lecturePages.length - 1; i >= 0; i -= 1) {
-  //   lecturePage.push(lecturePages[i]);
-  // }
-  // console.log(lecturePage.length);
-
-
-  // console.log(lecturePages);
-  // for (let i = 0; i < lecturePage.length; i++) {
-  //   //const element = array[i];
-    
-  // }
-
-
-
-
-  let a = [];
-  for (let i = 0; i < lecturePages.length; i += 1) {
-    a.push(lecturePages[i]);
+  for (let i = 0; i < el.length; i += 1) {
+    values.push(el[i]);
   }
-  
-  
-    Array.from(lecturePages);
-  
-    console.log(lecturePages[0]);
-  console.log(a[0]);
-
-
 
   const URL = 'fyrirlestur.html?slug=';
 
@@ -63,6 +35,7 @@ console.log(isLecturePage);
       let output = '';
       let undef = '';
 
+      let nr = 1;
       lecturesData.forEach((lecture) => {
         if (lecture.thumbnail === undefined) undef = ` class="${lecture.thumbnail}"`;
         output += 
@@ -84,11 +57,18 @@ console.log(isLecturePage);
 let button = document.querySelectorAll('button');
 
 button[0].addEventListener('click', () => {
+  el = document.getElementById('1');
+  if (el.checked) el = true;
+  else el = false;
+
   console.log('1');
 });
 button[1].addEventListener('click', () => {
+  el = document.getElementById('2');
+
   console.log('2');
 });
 button[2].addEventListener('click', () => {
+  el = document.getElementById('3');
   console.log('3');
 });
