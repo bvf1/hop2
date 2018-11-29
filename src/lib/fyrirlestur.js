@@ -2,9 +2,9 @@ const x = location.search;
 
 const slug = x.substring(6);
 
-const output = document.getElementById('output');
 let lists = -1;
 
+const output = document.getElementById('output');
 
 document.addEventListener('DOMContentLoaded', () => {
   const page = document.querySelector('body');
@@ -24,12 +24,24 @@ document.addEventListener('DOMContentLoaded', () => {
     let li;
     let text;
     let item;
+    let string;
+   // let output;
 
     switch (type) {
       case 'youtube':
-        el = document.createElement('video');
-        break;
+        el = document.createElement('iframe');
+        el.setAttribute('src', data)
+        el.setAttribute('frameborder', '0');
+        el.setAttribute('allowfullscreen', '0');
+        output.appendChild(el)
+        return;
       case 'text':
+        string = data.split('\n');
+        for (let i = 0; i < string.length; i += 1) {
+          element('p', string[i]);
+        }
+        return;
+      case 'p':
         el = document.createElement('p');
         break;
       case 'attribute':
@@ -40,7 +52,9 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
       case 'image':
         el = document.createElement('img');
-        break;
+        el.setAttribute('src', data);
+        output.appendChild(el);
+        return;
       case 'caption':
         el = document.createElement('caption');
         break;
@@ -62,12 +76,21 @@ document.addEventListener('DOMContentLoaded', () => {
         item[lists].appendChild(li);
         return;
       case 'code':
-        el = document.createElement('code');
+        string = data.split('\n');
+        for (let i = 0; i < string.length; i += 1) {
+          element('codeBit', string[i]);
+        }
+        return;
+      case 'codeBit':
+        el = document.createElement('pre');
+        el.setAttribute('class', 'code');
         break;
       default:
         console.log(undefined);
         break;
     }
+    
+
     text = document.createTextNode(data);
     output.appendChild(el).appendChild(text);
   }
