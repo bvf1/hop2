@@ -1,4 +1,4 @@
-// import List from './lib/list';
+//import List from './lib/list';
 
 document.addEventListener('DOMContentLoaded', () => {
   const page = document.querySelector('body');
@@ -11,6 +11,42 @@ console.log(isLecturePage);
     list.load();
   }
 */
+
+
+  let el = document.body.getElementsByClassName('list');
+  let lecturePages = Array.from(el);
+  console.log(lecturePages[0]);
+  console.log(lecturePages[0]);
+  
+
+  // let lecturePage = []; // [lecturePages.lenght];
+  // for (let i = lecturePages.length - 1; i >= 0; i -= 1) {
+  //   lecturePage.push(lecturePages[i]);
+  // }
+  // console.log(lecturePage.length);
+
+
+  // console.log(lecturePages);
+  // for (let i = 0; i < lecturePage.length; i++) {
+  //   //const element = array[i];
+    
+  // }
+
+
+
+
+  let a = [];
+  for (let i = 0; i < lecturePages.length; i += 1) {
+    a.push(lecturePages[i]);
+  }
+  
+  
+    Array.from(lecturePages);
+  
+    console.log(lecturePages[0]);
+  console.log(a[0]);
+
+
 
   const URL = 'fyrirlestur.html?slug=';
 
@@ -32,7 +68,7 @@ console.log(isLecturePage);
         output += 
         `
         
-          <a href="${URL}${lecture.slug}" class="lecture lecture-page"><div class="grey">
+          <a href="${URL}${lecture.slug}" class="lecture lecture-page list"><div class="grey">
             <img${undef} src="${lecture.thumbnail}">
             <p>${lecture.category}</p>
             <h1 class="title">${lecture.title}</h1>

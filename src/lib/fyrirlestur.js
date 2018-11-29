@@ -1,8 +1,10 @@
-const x = location.search;
-
+const x = window.location.search;
 const slug = x.substring(6);
 
 let lists = -1;
+let quotes = -1;
+let quoteData;
+let text;
 
 const output = document.getElementById('output');
 
@@ -10,29 +12,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const page = document.querySelector('body');
 
   function setHeader(image, category, title) {
-    let output = '';
-    output += `
-    <h3 class="headtext">${category}</h3>
-    <h1 class="headtitle">${title}</h1>
+    document.getElementById('header').setAttribute('style', `background-image:url(${image})`);
+    text = '';
+    text += `
+    <h3>${category}</h3>
+    <h2>${title}</h2> 
     `;
-    document.getElementById('header').innerHTML = output;
+    document.getElementById('header').innerHTML = text;
   }
 
   function element(type, data) {
     let el;
     let li;
-    let text;
     let item;
     let string;
-   // let output;
 
     switch (type) {
       case 'youtube':
         el = document.createElement('iframe');
-        el.setAttribute('src', data)
+        el.setAttribute('src', data);
         el.setAttribute('frameborder', '0');
         el.setAttribute('allowfullscreen', '0');
-        output.appendChild(el)
+        output.appendChild(el);
         return;
       case 'text':
         string = data.split('\n');
@@ -45,10 +46,18 @@ document.addEventListener('DOMContentLoaded', () => {
         el.setAttribute('class', 'setn');
         break;
       case 'attribute':
-        el = document.createElement('attribute');
-        break;
+        text = `
+          <blockquote>${quoteData}<blockquote>
+          <attribute>${data}<attribute>
+        `;
+        item = document.getElementsByClassName('quote');
+        item[quotes].innerHTML = text;
+        return;
       case 'quote':
-        el = document.createElement('blockquote');
+        quotes += 1;
+        quoteData = data;
+        el = document.createElement('div');
+        el.setAttribute('class', 'quote');
         break;
       case 'image':
         el = document.createElement('img');
@@ -72,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         li = document.createElement('li');
         li.setAttribute('class', 'li');
         text = document.createTextNode(data);
-        li.appendChild(text);      
+        li.appendChild(text);
 
         item = document.getElementsByClassName('list');
         item[lists].appendChild(li);
@@ -88,15 +97,13 @@ document.addEventListener('DOMContentLoaded', () => {
         el.setAttribute('class', 'code');
         break;
       default:
-        console.log(undefined);
-        break;
+        el = document.createElement('div');
+        data = "Element Not Found";
     }
-    
 
     text = document.createTextNode(data);
     output.appendChild(el).appendChild(text);
   }
-
 
   fetch('../lectures.json')
     .then((result) => {
@@ -109,7 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
     .then((data) => {
       const lecturesData = data.lectures;
       const chosenLecture = lecturesData.find((lecture => lecture.slug === slug));
-
 
       const headerImage = chosenLecture.image;
       const headerCategory = chosenLecture.category;
@@ -124,9 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
       for (let i = 0; i < contents.length; i += 1) {
         lectureType = contents[i].type;
         lectureData = contents[i].data;
-        // console.log(lectureType);
-        // console.log(lectureData[0]);
-        // console.log(lectureData.length);
+
         element(lectureType, lectureData);
 
         if (lectureType === 'list') {
