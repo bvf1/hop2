@@ -1,9 +1,9 @@
- .code {
-   display: inherit;
+.code {
+  display: inherit;
+  color:black;
+  }
 
-   color:black;
- }
- .back {
+.back {
    text-align: center;
    font-family: $font_headline;
  }
@@ -13,8 +13,7 @@
     padding-right: 0;
     padding-left: 0;
   }
- }
-
+}
   iframe {
     margin: auto;
     margin-top: 1em;
