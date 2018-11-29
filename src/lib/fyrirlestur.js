@@ -1,10 +1,13 @@
 //export const isFinished = {};
-let isFinished;
+
 const x = window.location.search;
 const slug = x.substring(6);
+let el = document.getElementById('finishButton');
+console.log(el);
+let fin = el;
 const finished = {
-  slug,
-  finished: isFinished,
+  ur: slug,
+  finished: el,
 };
 export default finished;
 
@@ -36,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function element(type, data) {
-    let el;
+   // let el;
     let li;
     let item;
     let string;
@@ -112,11 +115,10 @@ document.addEventListener('DOMContentLoaded', () => {
         el = document.createElement('pre');
         el.setAttribute('class', 'code');
         break;
-      case 'div':
-      break;
       default:
         el = document.createElement('div');
-        data = "Element Not Found";
+        text = "Element Not Found";
+        output.appendChild(el).appendChild(text);
     }
 
     text = document.createTextNode(data);
@@ -134,7 +136,6 @@ document.addEventListener('DOMContentLoaded', () => {
     .then((data) => {
       const lecturesData = data.lectures;
       const chosenLecture = lecturesData.find((lecture => lecture.slug === slug));
-      
 
       const headerImage = chosenLecture.image;
       const headerCategory = chosenLecture.category;
@@ -170,26 +171,27 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(error => console.error(error));
 });
-
-let button = document.querySelector('button');
-let el
+//let isFinished;
+const button = document.querySelector('button');
 
 button.addEventListener('click', () => {
   el = document.getElementById('finishButton')
   text = document.getElementById('finishButton').innerText;
   document.getElementById('finishButton').innerText = 'Fyrirlestur er kláraður';
-  console.log(el);
-
 
   if (text === 'Klára fyrirlestur') {
-    //isFinished(true);
+    el.removeAttribute('class');
+    el.setAttribute('class', 'finished');
 
-    isFinished = false;
+  //  isFinished = false;
     document.getElementById('finishButton').innerText = 'Fyrirlestur er kláraður';
   } else {
+    el.removeAttribute('class');
+    el.setAttribute('class', 'unfinished');
+
     document.getElementById('finishButton').innerText = 'Klára fyrirlestur';
     //isFinished(false);
-    isFinished = true;
+   // isFinished = true;
   }
 });
 
