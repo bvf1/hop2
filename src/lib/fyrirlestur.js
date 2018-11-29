@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('header').setAttribute('style', `background-image:url(${image})`);
     text = '';
     text += `
-    <h3>${category}</h3>
-    <h2>${title}</h2> 
+    <h3 class="headertext">${category}</h3>
+    <h1 class="headertitle">${title}</h1> 
     `;
     document.getElementById('header').innerHTML = text;
   }
@@ -47,8 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
       case 'attribute':
         text = `
-          <blockquote>${quoteData}<blockquote>
-          <attribute>${data}<attribute>
+          <blockquote class="qt">${quoteData}<blockquote>
+          <attribute class="att">${data}<attribute>
         `;
         item = document.getElementsByClassName('quote');
         item[quotes].innerHTML = text;

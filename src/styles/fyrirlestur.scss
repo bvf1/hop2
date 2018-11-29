@@ -16,6 +16,7 @@
  }
 iframe {
   margin: auto;
+  margin-top: 1em;
   margin-bottom: 2em;
   
   width: 800px;
@@ -24,7 +25,7 @@ iframe {
 .setn {
   margin-bottom: 1em;
   font-family: $font_main;
-  line-height: 1.5;
+  line-height: 2;
  }
 
  .headi {
@@ -38,3 +39,29 @@ iframe {
  .li {
    margin-bottom: 1em;
  }
+ .headertitle {
+	//	font-family: $font_family_1;
+		font-size: 3.75rem;
+		font-weight: 600;
+    text-align: center;
+	}
+	.headertext {
+		//font-family: $font_family_2;
+    text-align: center;
+  }
+  
+  .quote {
+    background-color: #ccc;
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    line-height: 1.6;
+
+  }
+  .qt {
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 0.5em;
+  }
