@@ -35,15 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     switch (type) {
       case 'youtube':
-        text = `
-          <div class="video-container">
-            <iframe class="video"
-            src="${data}" frameborder="0" allowfullscreen="0">
-            </iframe>
-          </div>
-        `;
-        item = document.getElementById('output');
-        item.innerHTML = text;
+        el = document.createElement('iframe');
+        el.setAttribute('src', data)
+        el.setAttribute('src', data);
+        el.setAttribute('frameborder', '0');
+        el.setAttribute('allowfullscreen', '0');
+        output.appendChild(el)
+        output.appendChild(el);
         return;
       case 'text':
         string = data.split('\n');
