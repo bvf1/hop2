@@ -1,5 +1,40 @@
-.code {
-  display: inherit;
+ .code {
+   display: inherit;
 
-  color:white;
+   color:black;
+ }
+ .back {
+   text-align: center;
+   font-family: $font_headline;
+ }
+ .container {
+  padding: $gutter;
+  @media (min-width: 1200px) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+ }
+iframe {
+  width: 800px;
+  height: 450px;
+
+  margin: auto;
+  margin-bottom: 2em;
 }
+.setn {
+  margin-bottom: 1em;
+  font-family: $font_main;
+  line-height: 1.5;
+ }
+
+ .headi {
+   font-size: 32px;
+   font-weight: bold;
+   font-family: $font_headline;
+   margin-top: 1em;
+   margin-bottom: 1em;
+ }
+
+ .li {
+   margin-bottom: 1em;
+ }

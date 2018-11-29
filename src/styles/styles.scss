@@ -40,22 +40,7 @@ h3 {
 	font-family: $font_headline;
 	text-align: center;
 }
-.buttons {
-  display: flex;
-  justify-content: center;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-button {
-	flex-direction: row;
-	padding: 20 px;
-	font-size: 16px;
-	font-family: $font_headline;
-	border: 1.2px solid #999;
-	background-color: $grey-3;
-	border-radius: 5px;
-	text-align: center;
-}
+
 .title {
 	font-family: $font_main;
 	text-align: left;
@@ -78,3 +63,4 @@ img { /* stylelint-disable-line */
 @import "index";
 @import "header2";
 @import "header";
+@import "fyrirlestur";

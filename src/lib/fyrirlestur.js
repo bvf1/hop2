@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       case 'p':
         el = document.createElement('p');
+        el.setAttribute('class', 'setn');
         break;
       case 'attribute':
         text = `
@@ -68,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
       case 'heading':
         el = document.createElement('h2');
+        el.setAttribute('class', 'headi');
         break;
       case 'list':
         lists += 1;
@@ -77,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       case 'li':
         li = document.createElement('li');
+        li.setAttribute('class', 'li');
         text = document.createTextNode(data);
         li.appendChild(text);
 
