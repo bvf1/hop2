@@ -18,7 +18,7 @@
   margin: auto;
   margin-top: 1em;
   margin-bottom: 2em;
-  
+
   width: 800px;
   height: 450px;
 }
@@ -49,7 +49,7 @@
 		//font-family: $font_family_2;
     text-align: center;
   }
-  
+
   .quote {
     background-color: #ccc;
     padding: 1px;
@@ -69,4 +69,12 @@
   caption {
     display: -webkit-box;
     text-align: left;
+  }
+
+  button {
+    background-color: white;
+    border: none;
+    color: black;
+    cursor: pointer;
+    margin: auto;
   }
