@@ -1,47 +1,47 @@
+
+
 // a {
 //   text-decoration: none;
 // }
 
 .container {
   padding: $gutter;
-  @media (min-width: 1200px) {
-    padding-right: 0;
-    padding-left: 0;
+    @media (min-width: 1200px) {
+      padding-right: 0;
+      padding-left: 0;
   }
 }
 
 .lectures {
   @include centered;
-  margin-right: auto;
-  margin-left: auto;
-  @media (min-width: 599px) {
-    @include row;
-    flex-wrap: wrap;
-  }
+    margin-right: auto;
+    margin-left: auto;
+      @media (min-width: 599px) {
+      @include row;
+        flex-wrap: wrap;
+      }
 }
 
 .buttons {
-  display: flex;
   justify-content: center;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-.indxbutt {
-	flex-direction: row;
-	padding: 20px;
-	font-size: 16px;
-	font-family: $font_headline;
-	border: 1.2px solid #999;
-	background-color: $grey-3;
-	border-radius: 5px;
-	text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
-.image {
-	img[src=""] {
-		display: hidden;
-	}
+.indxbutt {
+  flex-direction: row;
+  padding: 10px;
+  font-size: 16px;
+  font-family: $font_headline;
+  border: 1.2px solid $grey-3;
+  background-color: $grey-3;
+  border-radius: 15px;
+  text-align: center;
+  margin:0 16px;
 }
+.indxbutt:active {
+  background: #2d2;
+ }
 
 .grey {
   background-color: $grey-3;
