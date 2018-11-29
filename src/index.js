@@ -1,29 +1,5 @@
-//import List from './lib/list';
-import finished from './lib/fyrirlestur';
-console.log(finished);
-
 document.addEventListener('DOMContentLoaded', () => {
-  const page = document.querySelector('body');
-  const isLecturePage = page.classList.contains('lecture-page');
-//console.log(isLecturePage);
-  /* if (isLecturePage) {
-    //
-  } else {
-    const list = new List();
-    list.load();
-  }
-*/
-
-  let el = document.body.getElementsByClassName('list');
-  let arr = Array.from(el);
-
-  for (let i = 0; i < el.length; i += 1) {
-    values.push(el[i]);
-  }
-
   const URL = 'fyrirlestur.html?slug=';
-
-  el = document.getElementby
 
   fetch('../lectures.json')
     .then((result) => {
@@ -37,14 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
       let output = '';
       let undef = '';
- 
+
       lecturesData.forEach((lecture) => {
-        
-        console.log(lecture.slug);
         if (lecture.thumbnail === undefined) undef = ` class="${lecture.thumbnail}"`;
         output += `
         
-          <a href="${URL}${lecture.slug}" class="lecture lecture-page list"><div class="grey">
+          <a href="${URL}${lecture.slug}" class "${lecture.category} lecture lecture-page list"><div class="grey">
             <img${undef} src="${lecture.thumbnail}">
             <p class="pflokkur">${lecture.category}</p>
             <div>
@@ -60,32 +34,69 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(error => console.error(error));   
 });
 
+/**
+ * Felur alla fyrirlestrana, gefur þeim classan hide
+ */
+function hide() {
+  const el = document.getElementsByClassName('lecture');
+  for (let i = 0; i < el.length; i += 1) {
+    el[i].addAttribute('class', 'hide');
+  }
+}
 
-//if (finished.slug)
+/**
+ * Sýnir alla fyrirlestra af gefnri týpu, tekur clasann hide í burtu
+ * @param {*} type
+ */
+function show(type) { 
+  const el = document.getElementsByClassName(type);
+  for (let i = 0; i < el.length; i += 1) {
+    el[i].removeAttribute('class', 'hide');
+  }
+}
 
-//let check = document.getElementsByClassName('check');
+/**
+ * Finnur út hvað á að fela og hvað á að birta
+ * @param {*} butArr 
+ */
+function showWhat(butArr) {
+  if (((butArr[0] && butArr[1] && butArr[2]) || (!butArr[0] && !butArr[1] && !butArr[2]))) console.log('showall');
+  else {
+    hide();
+    if (butArr[0]) show('html');
+    if (butArr[1]) show('css');
+    if (butArr[2]) show('javascript');
+  }
+}
 
-let el = document.getElementsByClassName('indxbutt');
-let ell = document.getElementById('1').classList.toggle('checked');
-
-let butArr = [true, true, true];
-
+//document.getElementById('1').classList.remove('checked');
+let isChecked;
+let butArr = [false, false, false];
+/**
+ * addEvent listener fyrir takkana
+ */
 let button = document.querySelectorAll('button');
+
 button[0].addEventListener('click', () => {
   document.getElementById('1').classList.toggle('checked');
-
-  if (butArr[0])
-
-
-  console.log('1');
+  butArr[0] = !butArr[0];
+  showWhat(butArr);
+  console.log('1 ' + butArr[0] + butArr[1] + butArr[2]);
 });
+
 button[1].addEventListener('click', () => {
   document.getElementById('2').classList.toggle('checked');
+  butArr[1] = !butArr[1];
+  showWhat(butArr);
 
-  console.log('2');
+  console.log('2 ' + butArr[1]);
 });
-button[2].addEventListener('click', () => {
 
+button[2].addEventListener('click', () => {
   document.getElementById('3').classList.toggle('checked');
-  console.log('3');
+  //el = document.getElementsByClassName('checked');
+  butArr[2] = !butArr[2];
+  showWhat(butArr);
+
+  console.log('3 ' + butArr[2]);
 });
