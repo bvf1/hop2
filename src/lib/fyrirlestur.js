@@ -6,6 +6,12 @@ let quotes = -1;
 let quoteData;
 let text;
 
+let isChecked = true;
+
+// export default function isChecked(element) {
+  
+// }
+
 const output = document.getElementById('output');
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -18,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <h3 class="headertext">${category}</h3>
     <h1 class="headertitle">${title}</h1> 
     `;
-    document.getElementById('header').innerHTML = text;
+    output.innerHTML = text;
   }
 
   function element(type, data) {
@@ -29,12 +35,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     switch (type) {
       case 'youtube':
-        el = document.createElement('iframe');
-        el.setAttribute('class', 'iframe');
-        el.setAttribute('src', data);
-        el.setAttribute('frameborder', '0');
-        el.setAttribute('allowfullscreen', '0');
-        output.appendChild(el);
+        text = `
+          <div class="video">
+            <iframe src="${data}" frameborder="0" allowfullscreen="0">
+            <iframe>
+          </div>
+        `;
+        item = document.getElementById('output');
+        item.innerHTML = text;
         return;
       case 'text':
         string = data.split('\n');
@@ -97,6 +105,8 @@ document.addEventListener('DOMContentLoaded', () => {
         el = document.createElement('pre');
         el.setAttribute('class', 'code');
         break;
+      case 'div':
+      break;
       default:
         el = document.createElement('div');
         data = "Element Not Found";
