@@ -14,21 +14,13 @@
     padding-left: 0;
   }
  }
- .haetta {
-   padding: $gutter;
-   @media (min-width: 1200px) {
-     padding-right: 0;
-     padding-left: 0;
- }
+
 .iframe {
   margin: auto;
   margin-top: 1em;
   margin-bottom: 2em;
-
-  width: 800px;
-  height: 450px;
-
 }
+
   iframe {
     margin: auto;
     margin-top: 1em;
@@ -97,10 +89,13 @@ button {
     font-size: 16px;
     margin: auto;
     cursor: pointer;
+    font-family: $font_main;
   }
 
-  .unfinished {
+  .haetta {
+    padding: 15px 32px;
     position: absolute;
+    margin: auto;
     left: 15%;
   }
   .back {

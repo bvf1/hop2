@@ -1,10 +1,11 @@
 //import List from './lib/list';
 import finished from './lib/fyrirlestur';
+console.log(finished);
 
 document.addEventListener('DOMContentLoaded', () => {
   const page = document.querySelector('body');
   const isLecturePage = page.classList.contains('lecture-page');
-console.log(isLecturePage);
+//console.log(isLecturePage);
   /* if (isLecturePage) {
     //
   } else {
@@ -38,9 +39,7 @@ console.log(isLecturePage);
       let undef = '';
  
       lecturesData.forEach((lecture) => {
-        // if (lecture.slug === finished.slug) {
-        //   el = 
-        // }
+        
         console.log(lecture.slug);
         if (lecture.thumbnail === undefined) undef = ` class="${lecture.thumbnail}"`;
         output += `
@@ -66,21 +65,27 @@ console.log(isLecturePage);
 
 //let check = document.getElementsByClassName('check');
 
+let el = document.getElementsByClassName('indxbutt');
+let ell = document.getElementById('1').classList.toggle('checked');
+
+let butArr = [true, true, true];
 
 let button = document.querySelectorAll('button');
 button[0].addEventListener('click', () => {
-  el = document.getElementById('1');
-  if (el.checked) el = true;
-  else el = false;
+  document.getElementById('1').classList.toggle('checked');
+
+  if (butArr[0])
+
 
   console.log('1');
 });
 button[1].addEventListener('click', () => {
-  el = document.getElementById('2');
+  document.getElementById('2').classList.toggle('checked');
 
   console.log('2');
 });
 button[2].addEventListener('click', () => {
-  el = document.getElementById('3');
+
+  document.getElementById('3').classList.toggle('checked');
   console.log('3');
 });
