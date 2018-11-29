@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     switch (type) {
       case 'youtube':
         el = document.createElement('iframe');
+        el.setAttribute('class', 'iframe');
         el.setAttribute('src', data);
         el.setAttribute('frameborder', '0');
         el.setAttribute('allowfullscreen', '0');

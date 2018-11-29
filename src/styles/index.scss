@@ -47,6 +47,17 @@ button {
   background-color: $grey-3;
 }
 
+.pflokkur {
+  text-transform: uppercase;
+  font-family: $font_headline;
+  font-size: 16px;
+}
+
+.title {
+  font-family: $font_headline;
+  font-weight: bold;
+}
+
 .lecture {
   margin-top: $gutter;
   margin-bottom: $gutter;

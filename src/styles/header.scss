@@ -6,13 +6,13 @@
 	background: url(../img/header.jpg) 50% 50%;
 	background-size: cover;
 
-	h1 {
+.header__title {
 	//	font-family: $font_family_1;
 		font-size: 3.75rem;
 		font-weight: 600;
 		text-align: center;
 	}
-	h3 {
+.headertext {
 		//font-family: $font_family_2;
 		text-align: center;
 	}
