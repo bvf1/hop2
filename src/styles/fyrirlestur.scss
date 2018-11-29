@@ -13,15 +13,23 @@
     padding-right: 0;
     padding-left: 0;
   }
- }
-.iframe {
-  margin: auto;
-  margin-top: 1em;
-  margin-bottom: 2em;
+  .video-container {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;
+  }
   
-  width: 800px;
-  height: 450px;
-}
+  .video {
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    
+    width: 800px;
+    height: 450px;
+  }
+
 .setn {
   margin-bottom: 1em;
   font-family: $font_main;

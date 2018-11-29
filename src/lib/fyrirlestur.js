@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <h3 class="headertext">${category}</h3>
     <h1 class="headertitle">${title}</h1> 
     `;
-    output.innerHTML = text;
+    document.getElementById('header').innerHTML = text;
   }
 
   function element(type, data) {
@@ -36,9 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
     switch (type) {
       case 'youtube':
         text = `
-          <div class="video">
-            <iframe src="${data}" frameborder="0" allowfullscreen="0">
-            <iframe>
+          <div class="video-container">
+            <iframe class="video"
+            src="${data}" frameborder="0" allowfullscreen="0">
+            </iframe>
           </div>
         `;
         item = document.getElementById('output');
