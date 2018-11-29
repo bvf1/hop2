@@ -33,6 +33,37 @@ Verkefnið gekk ágætlega, við náðum að koma sem flestu upp og reyna að f�
 
 Samstarfið gekk líka vel eins og síðast.
 
+Verkefnið er sett upp í eina möppu sem inniheldur allar skrárnar okkar.
+```bash
+hop2 - mappan inniheldur allar skrárnar
+```
+
+```bash
+img - mappan inniheldur allar myndirnar sem eru í verkefninu
+```
+
+```bash
+src - mappan inniheldur tvær möppur lib og styles, ásamt því að innihalda líka index.js
+
+lib - mappan inniheldur JavaScript verkefnisins en því er skipt upp í nokkrar skrár
+- fyrirlestur.js - JavaScriptið fyrir fyrirlestra síðuna
+Við nýttum okkur ekki þessar tvær js skrár en þær voru uppgefnar af kennara
+- helpers.js 
+- list.js 
+
+styles - mappan inniheldur scss skrár verkefnisins
+- config.scss - inniheldur ýmissa staðla verkefnisins s.s. litapallettu, leturgerðir og leturstærðir verkefnisins
+- fyrirlestur.scss - inniheldur allt scss fyrir fyrirlestrar síðu
+- header.scss - inniheldur scss fyrir header á forsíðu
+- header2.scss - inniheldur scss fyrir header á fyrirlestrar síðu, sem síðan var ekki nota en headerinn er gerður í javascript
+- index.scss - inniheldur scss fyrir index.html
+- lecture-page.scss - var endurskírð fyrirlestur.scss og er þar með ekkert notuð.
+- styles.scss - sameinar allt scss með importum frá hinum skránum sem síða þýðist með npm run dev yfir í css í styles.css skrá
+
+index.js - er javascript skrá fyrir index.html
+```
+
+
 ## Nemendur
 
 * Arndís Lilja Þórisdóttir ath216@hi.is
