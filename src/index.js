@@ -71,7 +71,7 @@ console.log(isLecturePage);
         
           <a href="${URL}${lecture.slug}" class="lecture lecture-page list"><div class="grey">
             <img${undef} src="${lecture.thumbnail}">
-            <p>${lecture.category}</p>
+            <p class="pflokkur">${lecture.category}</p>
             <div>
             <h1 class="title">${lecture.title}</h1>
             <input id='${nr}' type="checkbox"></input>
