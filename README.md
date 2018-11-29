@@ -1,10 +1,99 @@
 # Hópverkefni 2
 
-Verkefnið felst í því að smíða prótótýpu af fyrirlestravef fyrir vefforritun. Gefin eru gögn sem unnin eru uppúr námsefni vetrarins.
+## Tools
+Til að keyra
 
-Gefnar eru [fyrirmyndir](utlit/) í `500px` og `1500px` án grindar ásamt `1500px` með grind. Allt efni skal skalast snyrtilega á milli.
+```bash
+npm install
+npm run dev
+```
 
-## Almennt
+Til að keyra stylelint
+
+```bash
+npm run lint
+```
+
+Uppsett í verkefni
+
+```bash
+npm install babel
+npm install rollup
+```
+
+## Uppsetning
+
+Verkefnið er unnið í html, scss og javascript.
+Í html skjölunum eru mest byrjunar textarnir síðan kemur restin af texta vefsins og elementin í gegnum lecture.json sem er svo þýtt
+yfir í html með javascript.
+Við notuðum npm run dev til að þýða scss skrárnar yfir í styles.css sem stýrir mest öllu útliti á síðunni.
+JavaScript var síðan notað í að búa til element og virkni, eins og takkanna á forsíðu.
+
+Verkefnið gekk ágætlega, við náðum að koma sem flestu upp og reyna að fá hvert og eitt element til að virka og líta út eins og það á að gera.
+
+Samstarfið gekk líka vel eins og síðast.
+
+Verkefnið er sett upp í eina möppu sem inniheldur allar skrárnar okkar.
+```bash
+hop2 - mappan inniheldur allar skrárnar
+```
+
+```bash
+img - mappan inniheldur allar myndirnar sem eru í verkefninu
+```
+
+```bash
+src - mappan inniheldur tvær möppur lib og styles, ásamt því að innihalda líka index.js
+
+lib - mappan inniheldur JavaScript verkefnisins en því er skipt upp í nokkrar skrár
+- fyrirlestur.js - JavaScriptið fyrir fyrirlestra síðuna
+Við nýttum okkur ekki þessar tvær js skrár en þær voru uppgefnar af kennara
+- helpers.js 
+- list.js 
+
+styles - mappan inniheldur scss skrár verkefnisins
+- config.scss - inniheldur ýmissa staðla verkefnisins s.s. litapallettu, leturgerðir og leturstærðir verkefnisins
+- fyrirlestur.scss - inniheldur allt scss fyrir fyrirlestrar síðu
+- header.scss - inniheldur scss fyrir header á forsíðu
+- header2.scss - inniheldur scss fyrir header á fyrirlestrar síðu, sem síðan var ekki nota en headerinn er gerður í javascript
+- index.scss - inniheldur scss fyrir index.html
+- lecture-page.scss - var endurskírð fyrirlestur.scss og er þar með ekkert notuð.
+- styles.scss - sameinar allt scss með importum frá hinum skránum sem síða þýðist með npm run dev yfir í css í styles.css skrá
+
+index.js - er javascript skrá fyrir index.html
+```
+
+```bash
+utlit - mappan inniheldur uppgefið útlit af verkefninu frá kennara
+```
+
+```bash
+.editorconfig
+.eslint.js
+.gitattributes
+.gitignore
+.stylelintrc
+.README.md
+fyrirlestur.html - inniheldur htmlið fyrir fyrirlestra síður
+grid.css - inniheldur gridið sem er uppsett á síðunum okkar
+index.html - inniheldur htmlið fyrir forsíðu eða index síðu
+lectures.json - inniheldur efni fyrir fyrirlestrasíðurnar
+package-lock.json
+package.json
+rollup.config.js
+scripts.js
+```
+
+
+## Nemendur
+
+* Arndís Lilja Þórisdóttir ath216@hi.is
+* Ásdís Helga Hafdísardóttir ahh26@hi.is
+* Bára Valgerður Friðriksdóttir bvf1@hi.is
+
+### Hópverkefni 2 - verkefnalýsing frá kennara
+
+#### Almennt
 
 Gögn eru gefin í `lectures.json` sem sækja skal með _ajax_ virkni. Keyra verður verkefnið með `browser-sync` til að það virki.
 
@@ -23,7 +112,7 @@ Flest allt er sett upp í 12 dálka grind með `20px` gutter.
 
 Allar hreyfingar gerast á `300ms` með `ease-in-out` hröðunarfalli. Hreyfingar eru þegar svimað er yfir fyrirlestri í lista og síunar tökkum.
 
-## Forsíða
+#### Forsíða
 
 Forsíða inniheldur lista af öllum fyrirlestrum. Fram kemur hvort búið sé að klára fyrirlestur eða ekki. Nota skal `✓` til að tákna að fyrirlestri séð lokið, sjá að neðan hvernig virkni er.
 
@@ -31,7 +120,7 @@ Fyrir ofan lista skulu vera þrír takkar fyrir hvern af flokkunum: `HTML`, `CSS
 
 Þegar smellt er á fyrirlestur er farið yfir á `fyrirlestur.html?slug=<slug>` þar sem `<slug>` er _slug_ fyrir fyrirlesturinn, t.d. `fyrirlestur.html?slug=html-sagan`. Hægt er að nota `URLSearchParams` og `window.location.search` til að vita hvaða fyrirlestur átt er við á `fyrirlestur.html` síðu.
 
-## Fyrirlestur
+#### Fyrirlestur
 
 Fyrir hvern fyrirlestur skal birta haus og allt efni fyrirlesturs á eftir honum. Í haus kemur fram flokkur og titill.
 
@@ -39,13 +128,13 @@ Efni fyrirlesturs er geymt í fylki og skal birta það í sömu röð og það 
 
 Neðst er takki til að merkja fyrirlestur kláraðann og hlekkur til að fara til baka.
 
-### Kláraður fyrirlestur
+##### Kláraður fyrirlestur
 
 Ef fyrirlestur er merktur kláraður skal sýna `✓ Fyrirlestur kláraður` í `#2d2`. Annars `Klára fyrirlestur`. Þegar fyrirlestur er kláraður skal vista upplýsingar um það í `localStorage` og birta í lista og á fyrirlestra síðu.
 
 Nota skal `slug` sem auðkenni yfir kláraða fyrirlestra.
 
-## Fyrirlestragögn
+#### Fyrirlestragögn
 
 `lectures.json` inniheldur fylki af fyrirlestrum sem birta skal. Hver fyrirlestur getur haft:
 
@@ -73,13 +162,13 @@ Fyrir efni fyrirlesturs er efni alltaf með:
 
 Athugið að meira efni mun bætast við það sem gefið er í byrjun. Virkni ætti að ráða við hvaða efni sem er í hvaða formi sem er, svo lengi sem það fylgir reglum að ofan.
 
-## Hópavinna
+#### Hópavinna
 
 Verkefnið skal unnið í hóp með þremur einstaklingum. Hafið samband við kennara ef ekki er mögulegt að vinna í hóp.
 
 Notast skal við Git og GitHub. Engar zip skrár með kóða ættu að ganga á milli í hópavinnu, heldur á að „committa“ allan kóða og vinna gegnum Git.
 
-## Lýsing á verkefni
+#### Lýsing á verkefni
 
 `README.md` skrá skal vera í rót verkefnis og innihalda:
 
@@ -88,7 +177,7 @@ Notast skal við Git og GitHub. Engar zip skrár með kóða ættu að ganga á 
 * Upplýsingar um alla sem unnu verkefni
 * Leyfilegt er að halda eftir þessari verkefnalýsingu en hún skal þá koma _á eftir_ ykkar lýsingu
 
-## Tæki og tól
+#### Tæki og tól
 
 Eftirfarandi er sett upp í verkefni:
 
@@ -121,18 +210,18 @@ Setja þarf upp
 
 og bæta við í tól að ofan.
 
-## Mat
+#### Mat
 
 * 30% - `README` eftir forskrift, tæki og tól uppsett. Snyrtilegt, gilt (skv. eslint) JavaScript. Snyrtilegt, gilt (skv. stylelint) CSS/Sass, gilt og aðgengilegt HTML. Git notað
 * 30% – Yfirlitssíða með síu
 * 30% – Fyrirlestrarsíða útfærð með efni
 * 10% – Hægt að skrá að fyrirlestur sér kláraður
 
-## Sett fyrir
+#### Sett fyrir
 
 Verkefni sett fyrir á Uglu föstudaginn 9. nóvember 2018.
 
-## Skil
+#### Skil
 
 Einn aðili úr hóp skal skila fyrir hönd allra og skila skal undir „Verkefni og hlutaprófa“ á Uglu í seinasta lagi fyrir lok dags fimmtudaginn 29. nóvember 2018, seinustu dæmatímar eru þann fimmtudag.
 
@@ -142,27 +231,16 @@ Skil skulu innihalda:
 * Slóð á GitHub repo fyrir verkefni, og dæmatímakennurum skal hafa verið boðið í repo ([sjá leiðbeiningar](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/)). Notendanöfn þeirra eru `arnar44`, `gorri4`, `mimiqkz`, `hinriksnaer`, `gunkol`, `freyrdanielsson` og `osk`
 * Slóð á verkefnið keyrandi á vefnum
 
-## Einkunn
+#### Einkunn
 
 Sett verða fyrir tíu minni verkefni þar sem átta bestu gilda 3,5% hvert, samtals 28% af lokaeinkunn.
 
 Sett verða fyrir tvö stærri verkefni þar sem hvort um sig gildir 11%, samtals 22% af lokaeinkunn.
 
-## Myndir
+#### Myndir
 
 Myndir frá:
 
 * https://unsplash.com/photos/xekxE_VR0Ec
 * https://unsplash.com/photos/C4G18Paw0d4
 * https://unsplash.com/photos/iar-afB0QQw
-
----
-
-> Útgáfa 0.2
-
-### Útgáfusaga
-
-| Útgáfa | Lýsing                                |
-|--------|---------------------------------------|
-| 0.1    | Fyrsta útgáfa                         |
-| 0.2    | Setja inn auka efni í `lectures.json` |

@@ -13,23 +13,13 @@
     padding-right: 0;
     padding-left: 0;
   }
-<<<<<<< HEAD
  }
-.iframe {
-  margin: auto;
-  margin-top: 1em;
-  margin-bottom: 2em;
 
-  width: 800px;
-  height: 450px;
-=======
->>>>>>> d7e96132fe58f2204be74ddbe7bdadc4ddb9a554
-}
   iframe {
     margin: auto;
     margin-top: 1em;
     margin-bottom: 2em;
-    
+
     width: 800px;
     height: 450px;
   }
@@ -81,16 +71,12 @@
   caption {
     display: -webkit-box;
     text-align: left;
-<<<<<<< HEAD
   }
 
-  button {
+button {
     background-color: white;
     border: none;
     color: black;
     cursor: pointer;
-    margin: auto;
+    font-family: $font_main;
   }
-=======
-  }
->>>>>>> d7e96132fe58f2204be74ddbe7bdadc4ddb9a554
