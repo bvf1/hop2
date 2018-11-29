@@ -1,8 +1,53 @@
 # Hópverkefni 2
 
-Verkefnið felst í því að smíða prótótýpu af fyrirlestravef fyrir vefforritun. Gefin eru gögn sem unnin eru uppúr námsefni vetrarins.
+## Tools
+Til að keyra
 
-Gefnar eru [fyrirmyndir](utlit/) í `500px` og `1500px` án grindar ásamt `1500px` með grind. Allt efni skal skalast snyrtilega á milli.
+```bash
+npm install
+npm run dev
+```
+
+Til að keyra stylelint
+
+```bash
+npm run lint
+```
+
+Uppsett í verkefni
+
+```bash
+npm install babel
+npm install rollup
+```
+
+## Uppsetning
+
+Verkefnið er unnið í html, scss og javascript.
+Í html skjölunum eru mest byrjunar textarnir síðan kemur restin af texta vefsins og elementin í gegnum lecture.json sem er svo þýtt
+yfir í html með javascript.
+Við notuðum npm run dev til að þýða scss skrárnar yfir í styles.css sem stýrir mest öllu útliti á síðunni.
+JavaScript var síðan notað í að búa til element og virkni, eins og takkanna á forsíðu.
+
+Verkefnið gekk ágætlega, við náðum að koma sem flestu upp og reyna að fá hvert og eitt element til að virka og líta út eins og það á að gera.
+
+Samstarfið gekk líka vel eins og síðast.
+
+## Nemendur
+
+* Arndís Lilja Þórisdóttir ath216@hi.is
+* Ásdís Helga Hafdísardóttir ahh26@hi.is
+* Bára Valgerður Friðriksdóttir bvf1@hi.is
+
+
+`README.md` skrá skal vera í rót verkefnis og innihalda:
+
+* Upplýsingar um hvernig keyra skuli verkefnið
+* Lýsingu á uppsetningu verkefnis, hvernig því er skipt í möppur, hvernig CSS og JavaScript er skipulagt og fleira sem á við
+* Upplýsingar um alla sem unnu verkefni
+* Leyfilegt er að halda eftir þessari verkefnalýsingu en hún skal þá koma _á eftir_ ykkar lýsingu
+
+## Hópverkefni 2 - verkefnalýsing frá kennara
 
 ## Almennt
 

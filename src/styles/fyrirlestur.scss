@@ -14,19 +14,12 @@
     padding-left: 0;
   }
  }
-.iframe {
-  margin: auto;
-  margin-top: 1em;
-  margin-bottom: 2em;
 
-  width: 800px;
-  height: 450px;
-}
   iframe {
     margin: auto;
     margin-top: 1em;
     margin-bottom: 2em;
-    
+
     width: 800px;
     height: 450px;
   }
@@ -80,10 +73,10 @@
     text-align: left;
   }
 
-  button {
+button {
     background-color: white;
     border: none;
     color: black;
     cursor: pointer;
-    margin: auto;
+    font-family: $font_main;
   }
