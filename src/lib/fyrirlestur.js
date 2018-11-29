@@ -12,9 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function setHeader(image, category, title) {
     let output = '';
     output += `
-    <img class="image" src="${image}">
-    <h3>${category}</h3>
-    <h2>${title}</h2> 
+    <h3 class="headtext">${category}</h3>
+    <h1 class="headtitle">${title}</h1>
     `;
     document.getElementById('header').innerHTML = output;
   }
