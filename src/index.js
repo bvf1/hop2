@@ -62,7 +62,8 @@ console.log(isLecturePage);
 
       let output = '';
       let undef = '';
-
+      
+      let nr = 1;
       lecturesData.forEach((lecture) => {
         if (lecture.thumbnail === undefined) undef = ` class="${lecture.thumbnail}"`;
         output += 
@@ -71,7 +72,10 @@ console.log(isLecturePage);
           <a href="${URL}${lecture.slug}" class="lecture lecture-page list"><div class="grey">
             <img${undef} src="${lecture.thumbnail}">
             <p>${lecture.category}</p>
+            <div>
             <h1 class="title">${lecture.title}</h1>
+            <input id='${nr}' type="checkbox"></input>
+            </div>
           </div></a>
       `;
         undef = '';
