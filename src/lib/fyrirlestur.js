@@ -47,11 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
       case 'attribute':
         el = document.createElement('attribute');
-        el.setAttribute('class', 'hof');
         break;
       case 'quote':
         el = document.createElement('blockquote');
-        el.setAttribute('class', 'qt');
         break;
       case 'image':
         el = document.createElement('img');
@@ -63,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
       case 'heading':
         el = document.createElement('h2');
+        el.setAttribute('class', 'headi');
         break;
       case 'list':
         lists += 1;
